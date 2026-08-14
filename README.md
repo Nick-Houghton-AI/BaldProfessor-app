@@ -13,12 +13,16 @@ AI model on your computer; **nothing ever leaves your machine.**
 
 Grab the latest build from the **[Releases](../../releases)** page:
 
-- **Windows** — `BaldProfessor-windows.zip`
-- **macOS (Apple Silicon)** — `BaldProfessor-macos-arm64.zip`
+| Platform | File |
+|---|---|
+| **Windows** (64-bit) | `BaldProfessor-windows.zip` |
+| **macOS — Apple Silicon** (M1/M2/M3/M4) | `BaldProfessor-macos-arm64.zip` |
+| **macOS — Intel** | `BaldProfessor-macos-x86_64.zip` |
 
-> **Which Mac do I have?** Apple menu ▸ *About This Mac*. If the chip says **M1/M2/M3/M4**,
-> use the download above. **Intel** Macs aren't supported yet — the Apple Silicon build
-> won't run on them ("Bad CPU type in executable"). Open an issue if you need an Intel build.
+> **Which Mac do I have?** Apple menu ▸ *About This Mac*. If the chip line says
+> **Apple M1/M2/M3/M4**, take the Apple Silicon build; if it says **Intel**, take the
+> Intel one. They aren't interchangeable — the wrong one fails with
+> "Bad CPU type in executable".
 
 Unzip it anywhere (e.g. your Desktop) and keep the folder together — your classes
 and settings are saved inside it.
