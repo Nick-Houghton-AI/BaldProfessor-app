@@ -13,8 +13,12 @@ AI model on your computer; **nothing ever leaves your machine.**
 
 Grab the latest build from the **[Releases](../../releases)** page:
 
-- **Windows** — `BaldProfessor-windows.zip` ✅ available now
-- **macOS** — coming soon
+- **Windows** — `BaldProfessor-windows.zip`
+- **macOS (Apple Silicon)** — `BaldProfessor-macos-arm64.zip`
+
+> **Which Mac do I have?** Apple menu ▸ *About This Mac*. If the chip says **M1/M2/M3/M4**,
+> use the download above. **Intel** Macs aren't supported yet — the Apple Silicon build
+> won't run on them ("Bad CPU type in executable"). Open an issue if you need an Intel build.
 
 Unzip it anywhere (e.g. your Desktop) and keep the folder together — your classes
 and settings are saved inside it.
@@ -32,8 +36,9 @@ and free:
    Gemma 3 4B is ~3 GB, handles both text and photos of notes, and runs comfortably
    on any 16 GB+ laptop (including Apple silicon). Have 32 GB+ and want more quality?
    Pull `gemma3:12b` and set it in Settings.
-3. **Run Bald Professor** — double-click `BaldProfessor.exe`. It opens in its own
-   window. That's it.
+3. **Run Bald Professor** — Windows: double-click `BaldProfessor.exe`. macOS: open the
+   unzipped folder and run `BaldProfessor` (see the note below on the first launch).
+   It opens in its own window. That's it.
 
 Your classes, settings and backups are saved inside the app's own folder, so
 moving or copying that folder takes your study data with it.
@@ -42,10 +47,14 @@ The app checks your setup on first launch (**Tools ▸ Run setup check**) and te
 you in plain language if anything's missing.
 
 ### A note on security warnings
-The app isn't code-signed with a paid certificate, so Windows SmartScreen may show
-"Windows protected your PC" the first time — click **More info ▸ Run anyway**. When
-the macOS build lands, Gatekeeper will similarly say "unidentified developer";
-right-click the app → **Open** → **Open** (only needed once).
+The app isn't code-signed with a paid certificate, so your system will warn you the
+first time. This is expected for independent software; it only happens once.
+
+- **Windows** — SmartScreen shows "Windows protected your PC": click **More info ▸ Run anyway**.
+- **macOS** — Gatekeeper says the developer can't be verified: **right-click** (or
+  Control-click) `BaldProfessor` ▸ **Open** ▸ **Open**. Double-clicking alone won't
+  offer the option. If macOS still blocks it, allow it under
+  *System Settings ▸ Privacy & Security*.
 
 ## What it does
 
