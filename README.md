@@ -27,28 +27,44 @@ Grab the latest build from the **[Releases](../../releases)** page:
 Unzip it anywhere (e.g. your Desktop) and keep the folder together — your classes
 and settings are saved inside it.
 
-## Setup (one time, ~5 minutes)
+## Setup
 
-Bald Professor needs a local AI model to run. The recommended one is small, fast,
-and free:
+**There isn't any.** Unzip, run `BaldProfessor`, drop your course files into a
+class, and click Generate. **Quick mode** builds flashcards, a study guide and a
+quiz straight from your files with no AI model, no downloads and no account.
 
-1. **Install [Ollama](https://ollama.com)** (Windows or macOS).
-2. **Pull the model** — open a terminal and run:
-   ```
-   ollama pull gemma3:4b
-   ```
-   Gemma 3 4B is ~3 GB, handles both text and photos of notes, and runs comfortably
-   on any 16 GB+ laptop (including Apple silicon). Have 32 GB+ and want more quality?
-   Pull `gemma3:12b` and set it in Settings.
-3. **Run Bald Professor** — Windows: double-click `BaldProfessor.exe`. macOS: open the
-   unzipped folder and run `BaldProfessor` (see the note below on the first launch).
-   It opens in its own window. That's it.
+Everything else — spaced repetition, adaptive Learn, scored quizzes, search,
+analytics — works offline too.
+
+### Want better material? Add an AI (optional)
+
+Quick mode pulls out definitions and key passages, but it can't *explain* things
+or write exam-style questions. For that, pick one:
+
+**Option A — a local model (stays on your computer)**
+
+1. Install [Ollama](https://ollama.com).
+2. Run `ollama pull gemma3:4b` (~3 GB; handles text *and* photos of handwritten
+   notes; comfortable on any 16 GB+ laptop). With 32 GB+, `gemma3:12b` is better —
+   set it in Settings.
+
+**Option B — an assistant you already use (Claude Desktop, Claude Code, …)**
+
+Bald Professor works as an **MCP server**: your assistant reads your course files
+and writes flashcards, guides and quizzes straight back into the app. Best quality,
+nothing to install. Setup takes one config entry — see `Extras/SETUP-MCP.md` in the
+download.
+
+> **Privacy:** Quick mode and a local model never send anything anywhere. Option B
+> does — your assistant receives whatever files it reads. Both AI options are off
+> until you set them up.
 
 Your classes, settings and backups are saved inside the app's own folder, so
 moving or copying that folder takes your study data with it.
 
-The app checks your setup on first launch (**Tools ▸ Run setup check**) and tells
-you in plain language if anything's missing.
+The app checks your setup (**Tools ▸ Run setup check**) and tells you in plain
+language if anything's missing — including whether your chosen model is too big
+for your machine's memory.
 
 ### A note on security warnings
 The app isn't code-signed with a paid certificate, so your system will warn you the
@@ -62,7 +78,7 @@ first time. This is expected for independent software; it only happens once.
 
 ## What it does
 
-- **Generate** study guides, flashcards, and quizzes from your files.
+- **Generate** study guides, flashcards, and quizzes from your files — with or without AI.
 - **Review** with spaced repetition (remembers exactly when to show each card).
 - **Learn** adaptively — drills what you keep getting wrong.
 - **Practice** with scored, timed quizzes and weak-topic tracking.
@@ -72,9 +88,15 @@ first time. This is expected for independent software; it only happens once.
 
 ## Privacy
 
-100% offline by design. Your class materials and study data never leave your
-computer. Optional web fetch is off unless you turn it on, and asks before every
-fetch.
+**Offline by default.** Out of the box — and with a local model — your class
+materials and study data never leave your computer. There's no account, no
+telemetry, and no cloud storage; your classes are just folders on your disk.
+
+Two things can send data out, and **both are off until you turn them on**:
+
+- **Connecting an assistant over MCP** — it receives whatever course files it reads.
+- **Web fetch** — pulling a public page into a class. Restricted to public
+  http/https, blocks private and local addresses, and asks before every fetch.
 
 ## Support & feedback
 
