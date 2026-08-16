@@ -1,10 +1,12 @@
 # 📚 Bald Professor
 
-**A free, fully-offline AI study coach.** Drop a course's material into a folder —
-PDFs, slides, Word/notes, photos of handwritten notes — and Bald Professor turns
-it into study guides, flashcards, scored quizzes, practice exams, spaced-repetition
-review, and a tutor that answers from *your own* files. Everything runs on a local
-AI model on your computer; **nothing ever leaves your machine.**
+**A free, offline study coach.** Drop a course's material into a folder — PDFs,
+slides, Word/notes, photos of handwritten notes — and Bald Professor turns it into
+study guides, flashcards, scored quizzes, practice exams, spaced-repetition review,
+and a tutor that answers from *your own* files.
+
+**No account, no subscription, no cloud.** It works out of the box with no AI model
+at all; add a local model or your own AI assistant when you want richer material.
 
 > This is the download page. Bald Professor is free for personal use — see the
 > [license](LICENSE.txt). It is not open source.
